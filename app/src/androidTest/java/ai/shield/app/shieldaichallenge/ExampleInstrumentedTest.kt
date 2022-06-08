@@ -14,13 +14,10 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
     @get:Rule
     val rule = activityScenarioRule<MainActivity>()
-
-
 
     @Test
     fun verifyTitleOfS1Ep3() {

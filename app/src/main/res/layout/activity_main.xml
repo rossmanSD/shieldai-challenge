@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <!-- note: not sure how to set elevation shadow color to  -->
+    <!-- @color/shield_charcoal_grey without using attributes only -->
+    <!-- available in API 28 or higher. -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/list"
+        android:name="ai.shield.app.shieldaichallenge.view.ListFragment"
+        android:layout_width="0dp"
+        android:elevation="8dp"
+        android:background="@color/shield_white"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/expanded_view"
+        android:name="ai.shield.app.shieldaichallenge.view.DetailFragment"
+        android:layout_width="0dp"
+        android:background="@color/shield_white"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

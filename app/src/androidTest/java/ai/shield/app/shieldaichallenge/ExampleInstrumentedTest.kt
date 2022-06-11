@@ -20,7 +20,7 @@ class ExampleInstrumentedTest {
     val rule = activityScenarioRule<MainActivity>()
 
     @Test
-    fun verifyTitleOfS1Ep3() {
+    fun verifyTitleAndDescriptionOfS1Ep3() {
         onView(withId(R.id.recycler_view))
             .perform(scrollToPosition<RecyclerView.ViewHolder>(2))
             .check(
